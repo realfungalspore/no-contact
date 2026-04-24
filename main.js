@@ -14,6 +14,7 @@ for(const el of allNames) {
 		case "SUPERVISOR":
 			classToAdd = "nameSupervisor"
 			break;
+		case "ARC":
 		case "ARCHIVE":
 			classToAdd = "nameArchive"
 			break;
