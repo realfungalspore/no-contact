@@ -1,0 +1,137 @@
+@font-face {
+  font-family:Courier Prime;
+  src: url(Courier-Prime.ttf);
+}
+h2 {
+	word-break: break-all;
+	font-family:inherit;
+	font-weight:600;
+}
+body {
+	font-size:1.0em;
+	font-weight:500;
+	font-family: Courier Prime;
+}
+pre {
+	margin:0.1em;
+	font-size:1em;
+	font-family: Courier Prime;
+	white-space: pre-wrap;
+}
+.timecode {
+	font-family:inherit;
+	color:#595959
+}
+.radioflavor {
+	color:#595959;
+	font-style: italic;
+}
+.apb {
+	--bordercolor:	#ff2f00;
+	--backgroundcolor:  #ffa894;
+}
+.technicians {
+	--bordercolor:#e6993c;
+	--backgroundcolor:#f5d8b5;
+}
+.overwatchonly {
+	--bordercolor:#a11402;
+	--backgroundcolor: #f7c9c3;
+}
+.windbreaker {
+	--bordercolor:#adacac;
+	--backgroundcolor:#d6d6d6;
+}
+h2 {
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	left:3em;
+	border-style: solid;
+	border-radius:8px;
+	padding:0.2em 0.5em 0em 0.5em;
+	margin-top:0.2em;
+	width:fit-content;
+	border-color: var(--bordercolor);
+	background-color:var(--bordercolor)
+}
+h2.overwatchonly {
+	color:white;
+}
+.relay {
+	margin:1em;
+	padding:0.25em 0.5em 0.8em 1em;
+	font-size:1.3em;
+	border-style: solid;
+	border-radius: 20px;
+	border-width:8px;
+	background-color:var(--backgroundcolor);
+	border-color:var(--bordercolor);
+}
+.relay.human {
+	width:70%;
+}
+.relay.robot {
+	width:70%;
+	margin-left:25%
+}
+.relay.radio {
+	width:65%;
+	margin-left:15%
+}
+
+/* name colors */
+
+.nameProvost {
+	color:#990000;
+}
+.nameSupervisor {
+	color: #75700b;
+}
+.nameArchive {
+	color:#1155cc;
+}
+.nameBulletin {
+	color:#38761d;
+}
+.nameSpikefield {
+	color:#000000;
+}
+.nameHuman {
+	color:#351c75;
+}
+.nameRoomIntelligence {
+	color:#85200c;
+}
+.nameAutounit {
+	color:#0b5394;
+}
+
+/* icons
+
+some css code taken/adapted from https://scp-wiki.wikidot.com/site-69 <3
+*/
+
+.icon {
+	background-size: 2.5rem;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 2.5rem;
+	width: 3rem;
+	display: inline-block;
+	font-size: 0px;
+	transform: translateY(-1.9rem);
+	margin:1.5rem -1rem -1.5rem -1rem;
+}
+.icon-tech {
+	background-image: url("symbols/bx--wrench.png");
+}
+.icon-oso {
+	background-image: url("symbols/bx--power-off.png");
+}
+.icon-mic {
+	background-image: url("symbols/bx--microphone.png");
+}
+.icon-apb {
+	background-image: url("symbols/bx--cctv.png");
+}
