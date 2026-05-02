@@ -18,6 +18,74 @@ pre {
 	font-family: Courier Prime;
 	white-space: pre-wrap;
 }
+
+div.interloper {
+	padding:0.1em;
+	color:white;
+}
+
+div.interloper > table {
+	border-spacing: 0em;
+	font-size:1em;
+}
+
+div.interloper > table > tbody > tr {
+	padding:10px;
+	color:white;
+}
+
+@keyframes scanlines {
+  from {
+    background-position: 0 0px;
+  }
+  to {
+    background-position: 0 2em;
+  }
+}
+
+.crteffect {
+	background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+	background-size: 100% 6px, 10px 100%;
+	animation: scanlines infinite 3s linear ;
+}
+
+div.interloper > table {
+	width:100%
+}
+
+div.interloper > table > tbody > tr:nth-child(odd) {
+	background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+	background-size: 100% 6px, 10px 100%;
+	background-color: #2c2557;
+}
+
+div.interloper > table > tbody > tr:nth-child(even) {
+	/*background-color: var(--backgroundcolor);*/
+	
+}
+
+div.interloper > table > tbody > tr > th {
+	padding:0.5em 0em 0.5em 0em;
+	font-weight:350;
+}
+
+div.interloper > table > tbody > tr > th:nth-child(1) {
+	font-size:0.8em;
+	text-align:center;
+	width:23%;
+}
+
+div.interloper > table > tbody > tr > th:nth-child(2) {
+	text-align:left;
+	padding:0.5em
+}
+
+
+
+.connectionStability {
+	color:orange;
+}
+
 .timecode {
 	font-family:inherit;
 	color:#595959
@@ -50,6 +118,14 @@ pre {
 	--bordercolor: #0061b5;
 	--backgroundcolor: #bde0ff;
 }
+.interloper {
+	--bordercolor: #000000;
+	--backgroundcolor: #2b1545;
+}
+.healthcare {
+	--bordercolor: #3ba7ff;
+	--backgroundcolor: #def0ff;
+}
 h2 {
 	margin-left:auto;
 	margin-right:auto;
@@ -63,7 +139,7 @@ h2 {
 	border-color: var(--bordercolor);
 	background-color:var(--bordercolor)
 }
-h2.overwatchonly, h2.apb, h2.autounit {
+h2.overwatchonly, h2.apb, h2.autounit, h2.interloper {
 	color:white;
 }
 .relay {
@@ -114,6 +190,10 @@ h2.overwatchonly, h2.apb, h2.autounit {
 .nameAutounit {
 	color:#0b5394;
 }
+.nameRottmund {
+	color: #8c0000;
+	text-shadow: 1px 1px 2px #5c0000;
+}
 
 /* icons
 
@@ -124,13 +204,20 @@ some css code taken/adapted from https://scp-wiki.wikidot.com/site-69 <3
 	background-size: 2.5rem;
 	background-position: center;
 	background-repeat: no-repeat;
-	height: 2.5rem;
+	height: 2.7rem;
 	width: 3rem;
 	display: inline-block;
 	font-size: 0px;
 	transform: translateY(-1.9rem);
-	margin:1.5rem -1rem -1.5rem -1rem;
+	margin:1.5rem -0.7rem -1.7rem -1rem;
 }
+th > span.icon {
+	transform: translateY(-1.6rem);
+	height:1.3rem;
+	width:1.6rem;
+	background-size:1.3rem;
+}
+
 .icon-tech {
 	background-image: url("symbols/bx--wrench.png");
 }
@@ -148,6 +235,25 @@ some css code taken/adapted from https://scp-wiki.wikidot.com/site-69 <3
 }
 .icon-autounit {
 	background-image: url("symbols/bx--polygon.png");
+}
+.icon-eye {
+	background-image: url("symbols/eye.png");
+}
+
+.icon-cat {
+	background-image: url("symbols/bxs--cat.png");
+}
+.icon-crown {
+	background-image: url("symbols/bxs--crown.png");
+}
+.icon-firstaid {
+	background-image: url("symbols/bxs--first-aid.png");
+}
+.icon-radiation {
+	background-image: url("symbols/bxs--radiation.png");
+}
+.icon-bolt {
+	background-image: url("symbols/bxs--bolt-circle.png");
 }
 
 /* flashing text */

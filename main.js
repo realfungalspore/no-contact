@@ -8,6 +8,7 @@ for(const el of allNames) {
 	var classToAdd;
 	console.log(el.textContent);
 	switch(el.textContent) {
+		case "PROVOST-ARC":
 		case "PROVOST":
 			classToAdd = "nameProvost"
 			break;
@@ -24,6 +25,11 @@ for(const el of allNames) {
 		case "BULLETIN":
 			classToAdd = "nameBulletin"
 			break;
+		case "Rottmund":
+		case "rottmund":
+		case "ROTTMUND":
+			classToAdd = "nameRottmund"
+			break;
 		default:
 			var nameOnlyLetters = el.textContent.replace(/[^a-zA-Z]+/g, '');
 			if(natoAlphabet.includes(nameOnlyLetters)) {
@@ -39,3 +45,15 @@ for(const el of allNames) {
 	
 	el.classList.add(classToAdd)
 }
+
+const stabilityElements = document.getElementsByClassName("connectionStability");
+
+function reroll() {
+	for(const el of stabilityElements) {
+		if(Math.random() > 0.75 || el.textContent == '00.0') {
+			el.textContent = (75 + Math.random() * 25.01).toFixed(1)
+		}
+	}
+}
+reroll();
+window.setInterval(reroll, 1000)
